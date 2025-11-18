@@ -1,16 +1,89 @@
-# ai_toolkit
+# Chat AI Flutter – Exemplo com `flutter_ai_toolkit` + Google Gemini
 
-A new Flutter project.
+Este projeto demonstra uma forma simples e prática de criar um **chat com Inteligência Artificial** usando:
 
-## Getting Started
+* **Flutter AI Toolkit (`flutter_ai_toolkit`)**
+* **Google Gemini API (`google_generative_ai`)**
+* **Variáveis de ambiente com `flutter_dotenv`**
 
-This project is a starting point for a Flutter application.
+O chat suporta:
 
-A few resources to get you started if this is your first Flutter project:
+* Enviar mensagens de texto
+* Enviar anexos
+* Usar notas de voz
+* UI completa gerada automaticamente
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# 🚀 Funcionalidades
+
+* Chat com IA totalmente funcional
+* Interface pronta usando `LlmChatView`
+* Compatível com Android, iOS, Web, Windows, Linux e macOS
+* Carregamento seguro da API Key via `.env`
+* Uso do modelo **Gemini 2.5 Flash**
+
+---
+
+# 📁 Estrutura do Projeto
+
+O projeto já inclui:
+
+* `pubspec.yaml` configurado
+* `pubspec.lock` com versões exatas
+* Pastas de cada plataforma (android/ios/web/windows/etc)
+* `lib/` com o código do chat
+
+Mesmo assim, quem clonar o projeto **precisará instalar as dependências**.
+➡️ **Explicação detalhada abaixo.**
+
+---
+
+# 📦 Dependências
+
+As dependências **já estão declaradas** no seu `pubspec.yaml`, então nada precisa ser alterado.
+
+Mesmo assim, ao clonar o repositório, é necessário rodar:
+
+```
+flutter pub get
+```
+---
+
+# 🔐 Configuração da API Key do Gemini
+
+1. Entre em: [https://aistudio.google.com/](https://aistudio.google.com/)
+2. Vá em **API Keys**
+3. Gere uma API Key
+4. Na raiz do projeto, crie o arquivo `.env`
+
+```
+GEMINI_API_KEY=SUA_CHAVE_AQUI
+```
+
+
+
+---
+
+# ▶️ Como Rodar o Projeto
+
+1. Certifique-se de que o arquivo `.env` exista na raiz.
+2. No terminal:
+
+```
+flutter pub get
+flutter run
+```
+
+Para rodar em dispositivo físico Android, ative a **Depuração USB**.
+
+
+---
+
+# 🧠 Dicas Úteis
+
+* Para alterar o modelo do Gemini, basta mudar:
+
+```dart
+model: 'models/gemini-2.5-flash'
+```
