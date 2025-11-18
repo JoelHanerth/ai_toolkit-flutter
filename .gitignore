@@ -17,7 +17,10 @@ migrate_working_dir/
 *.ipr
 *.iws
 .idea/
-.env/
+
+# Environment files
+.env
+.metadata
 
 # The .vscode folder contains launch configuration and tasks you configure in
 # VS Code which you may wish to be included in version control, so this line
@@ -31,8 +34,8 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
-/coverage/
+build/
+coverage/
 
 # Symbolication related
 app.*.symbols
